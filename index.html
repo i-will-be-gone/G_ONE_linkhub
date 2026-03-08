@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>찬란한 탐험가, G=ONE</title>
+
+  <!-- Pretendard -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <main class="wrap">
+
+    <section class="profile">
+      <!-- ✅ 프로필 사진: 여기 src만 바꾸면 됨 -->
+      <div class="avatar">
+        <img src="./images/Profile.png" alt="profile" style="
+            mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+          " />
+      </div>
+
+      <h1 class="name">찬란한 탐험가, G=ONE</h1>
+      <p class="desc">“태양과도 같은 불꽃을 태워 찬란하여라”</p>
+      <p class="email">Artist / Music Producer from 🇰🇷</p>
+
+
+      <!-- ===== 탭 네비게이션 (3개 탭) ===== -->
+      <nav class="tabs" aria-label="tabs">
+        <div class="tab active" data-index="0">HOME</div>
+        <div class="tab" data-index="1">MUSIC</div>
+        <div class="tab" data-index="2">BRAND</div>
+      </nav>
+    </section>
+
+    <!-- ===== 슬라이드 컨테이너 ===== -->
+    <div class="content-wrapper">
+      <div class="content-slider">
+
+        <!-- HOME 섹션 -->
+        <section class="content-section stack">
+
+          <!-- ===== SNS BAR ===== -->
+          <div class="sns-bar">
+            <a href="https://www.youtube.com/@g.one_ex" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M22.7141 12.0001C22.7141 12.0001 22.7141 8.01441 22.2245 6.10513C21.9556 5.05299 21.1606 4.22371 20.1481 3.93871C18.317 3.42871 11.9999 3.42871 11.9999 3.42871C11.9999 3.42871 5.68598 3.42871 3.85171 3.93871C2.8435 4.21942 2.04743 5.04978 1.77529 6.10513C1.28564 8.01441 1.28564 12.0001 1.28564 12.0001C1.28564 12.0001 1.28564 15.9858 1.77529 17.8951C2.04421 18.9472 2.83921 19.7765 3.85171 20.0615C5.68598 20.5715 11.9999 20.5715 11.9999 20.5715C11.9999 20.5715 18.317 20.5715 20.1481 20.0615C21.1563 19.7808 21.9523 18.9504 22.2245 17.8951C22.7141 15.9858 22.7141 12.0001 22.7141 12.0001ZM16.2855 12.0001L9.85696 15.7501V8.25012L16.2855 12.0001Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+
+            <a href="https://www.instagram.com/g.one_ex/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm6-1.75a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 18 5.75zM12 9a3 3 0 1 1-3 3 3 3 0 0 1 3-3z" />
+              </svg>
+            </a>
+
+            <a href="https://www.tiktok.com/@i_w1ll_be_gone" target="_blank" rel="noopener noreferrer"
+              aria-label="TikTok">
+              <svg viewBox="2 2 22 22" fill="currentColor">
+                <path
+                  d="M16 3c.4 1.9 1.8 3.4 3.7 3.9V10c-1.5-.1-2.8-.6-3.9-1.5v6.1a5.6 5.6 0 1 1-4.9-5.5v3.1a2.4 2.4 0 1 0 1.8 2.3V3H16z" />
+              </svg>
+            </a>
+
+            <a href="https://open.spotify.com/artist/4kpgC3miW2obta0sY7cLns" target="_blank" rel="noopener noreferrer"
+              aria-label="Spotify">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.856934 11.9961C0.856934 5.86927 5.87122 0.856445 11.9998 0.856445C18.1841 0.856445 23.1426 5.86927 23.1426 11.9961C23.1426 18.1229 18.1284 23.1357 11.9998 23.1357C5.87122 23.1357 0.856934 18.1229 0.856934 11.9961ZM6.37314 16.1152C10.2731 15.224 13.5603 15.5582 16.1789 17.1734C16.5131 17.3962 16.9031 17.2848 17.126 16.9506V16.9506C17.4568 16.2892 16.5393 15.7925 15.8733 15.4709C13.1427 14.1524 9.81196 13.9347 6.03885 14.7784C5.70457 14.8898 5.42599 15.224 5.53742 15.6139C5.64885 15.9481 5.98314 16.2266 6.37314 16.1152ZM17.2924 14.1633C14.2839 12.3253 9.71529 11.7683 6.2053 12.8823C5.75958 12.9937 5.25815 12.7709 5.14672 12.3253C5.0353 11.8797 5.25815 11.3784 5.70387 11.267C9.77101 10.0417 14.7853 10.6543 18.2396 12.7709C18.5739 12.938 18.741 13.4949 18.4624 13.8848C18.1839 14.2747 17.6824 14.4418 17.2924 14.1633ZM4.36695 8.81935C4.53409 9.32064 5.09123 9.65482 5.64838 9.48773C9.04695 8.42947 15.0084 8.65226 18.5741 10.7688C19.0755 11.0473 19.7441 10.8802 20.0227 10.4903C20.3012 9.98901 20.1341 9.32063 19.6327 9.04214C15.5098 6.59143 8.99123 6.36864 5.03552 7.5383C4.53409 7.70539 4.19981 8.26237 4.36695 8.81935Z" />
+              </svg>
+            </a>
+
+            <a href="https://music.apple.com/kr/artist/g-one/1598043198" target="_blank" rel="noopener noreferrer"
+              aria-label="Apple Music">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M21.995 7.10252C22.0017 6.48827 21.9345 5.87544 21.795 5.27721C21.5308 4.18536 20.91 3.35189 19.9783 2.74096C19.5033 2.43531 18.9712 2.22944 18.4141 2.13586C17.9834 2.06169 17.5478 2.01989 17.1108 2.01084C17.0775 2.00833 17.0416 2.0025 17.0075 2H6.98833C6.86222 2.00778 6.73583 2.015 6.60916 2.02167C5.98666 2.05751 5.3675 2.12419 4.78166 2.35506C3.66833 2.7968 2.865 3.56526 2.39417 4.67211C2.23417 5.04551 2.15083 5.44307 2.09167 5.84564C2.04625 6.17174 2.01843 6.50005 2.00833 6.82914C2.00833 6.85581 2.0025 6.88081 2 6.90665V17.0942L2.0225 17.4476C2.06417 18.1269 2.15083 18.8011 2.43667 19.4254C2.97833 20.6089 3.885 21.3866 5.13166 21.76C5.48166 21.8658 5.845 21.9158 6.20916 21.95C6.67166 21.9942 7.13416 22 7.59833 22H16.79C17.2274 21.9987 17.6643 21.9708 18.0983 21.9167C18.7833 21.8283 19.4283 21.6249 20.0108 21.2415C20.7016 20.7947 21.2462 20.1552 21.5775 19.4021C21.7325 19.052 21.8216 18.6769 21.8858 18.2985C21.98 17.736 22.0008 17.1667 22 16.5983C21.9983 13.4311 22 10.268 21.9975 7.10252H21.995ZM16.6425 10.4281V15.1889C16.6425 15.5364 16.5941 15.8781 16.4391 16.194C16.1975 16.6858 15.8058 16.9958 15.2825 17.1442C14.9914 17.2275 14.6942 17.2756 14.3908 17.2884C13.5992 17.3259 12.9133 16.7883 12.7717 16.0082C12.7122 15.6713 12.7645 15.3243 12.9207 15.02C13.0769 14.7157 13.3283 14.4709 13.6367 14.3229C13.9058 14.1895 14.195 14.1145 14.485 14.0528C14.8 13.9845 15.1167 13.9253 15.43 13.8528C15.6583 13.8003 15.8108 13.6611 15.855 13.4227C15.8657 13.3698 15.8713 13.3159 15.8717 13.2619C15.8717 11.7488 15.8711 10.2367 15.87 8.72529C15.8697 8.67315 15.8624 8.62129 15.8483 8.5711C15.815 8.44607 15.7233 8.36856 15.595 8.37606C15.4616 8.3844 15.33 8.40523 15.1992 8.43107C14.5658 8.55665 13.9325 8.68334 13.2992 8.81114L11.3617 9.20287L10.2167 9.43457L10.1767 9.44541C9.94582 9.50959 9.86249 9.6146 9.85166 9.85381C9.85055 9.88882 9.85055 9.92493 9.85166 9.96216C9.84999 12.1309 9.85166 14.2996 9.84916 16.4674C9.84916 16.8175 9.80999 17.1642 9.66999 17.4901C9.43832 18.0235 9.02833 18.3569 8.47499 18.5178C8.18277 18.6022 7.88416 18.65 7.57916 18.6611C6.77916 18.6911 6.11666 18.161 5.97916 17.3742C5.8625 16.6974 6.17083 15.9698 6.94083 15.6448C7.23833 15.5198 7.54916 15.4514 7.86416 15.3864C8.10333 15.3364 8.34333 15.2897 8.58083 15.2389C8.89971 15.1689 9.06638 14.9705 9.08082 14.6438V14.5188L9.08249 7.11585C9.08249 7.01334 9.09333 6.90749 9.11749 6.80747C9.17583 6.56993 9.34499 6.43407 9.57249 6.37573C9.78499 6.32072 10.0017 6.28238 10.2175 6.23821C10.8286 6.11374 11.4397 5.99039 12.0508 5.86815L13.9425 5.48475L15.6175 5.14886C15.8008 5.11302 15.9858 5.07551 16.17 5.06051C16.4283 5.03967 16.6058 5.2022 16.6316 5.46224C16.6383 5.52337 16.6416 5.58532 16.6416 5.64811C16.6433 7.2406 16.6433 8.83308 16.6416 10.4256L16.6425 10.4281Z" />
+              </svg>
+            </a>
+
+            <a href="https://www.melon.com/artist/song.htm?artistId=3050686" target="_blank" rel="noopener noreferrer"
+              aria-label="Melon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16 2C19.3137 2 22 4.68629 22 8V16C22 19.3137 19.3137 22 16 22H8C4.68629 22 2 19.3137 2 16V8C2 4.68629 4.68629 2 8 2H16ZM11.5977 8.79785C9.0606 8.79785 7.00025 10.8549 7 13.3965C7 15.9383 9.06044 17.9961 11.5977 17.9961C14.1348 17.996 16.1953 15.9348 16.1953 13.3965C16.1951 10.8584 14.1346 8.79797 11.5977 8.79785ZM11.5977 11.1426C12.7239 11.1427 13.6375 12.1513 13.6377 13.3965C13.6377 14.6419 12.7241 15.6512 11.5977 15.6514C10.4711 15.6514 9.55762 14.642 9.55762 13.3965C9.55784 12.1512 10.4713 11.1426 11.5977 11.1426ZM15.2881 5C14.3427 5 13.5762 5.76706 13.5762 6.71289C13.5763 7.65857 14.3428 8.4248 15.2881 8.4248C16.2333 8.42473 16.9998 7.65853 17 6.71289C17 5.76711 16.2334 5.00008 15.2881 5Z" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- 카드 1 -->
+          <div class="card">
+            <a href="https://www.instagram.com/i_w1ll_be_gone/" target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
+                  <path d="M16.5 7.5v.01" />
+                </svg>
+              </div>
+              <div class="label">Official Website 🏠</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="card">
+            <a href="https://www.instagram.com/g.one_ex/" target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
+                  <path d="M16.5 7.5v.01" />
+                </svg>
+              </div>
+              <div class="label">Official IG ⭐</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- 카드 3 : HOME 전용 프로필 슬라이더 카드 -->
+          <div class="card profile-card clean-profile-card">
+            <div class="profile-slider">
+              <div class="profile-track" id="profileTrack">
+                <div class="profile-slide">
+                  <img src="images/G=ONE-Card-Profile-1.png" alt="G=ONE 프로필 사진 1">
+                </div>
+                <div class="profile-slide">
+                  <img src="images/G=ONE-Card-Profile-2.JPG" alt="G=ONE 프로필 사진 2">
+                </div>
+                <div class="profile-slide">
+                  <img src="images/G=ONE-Card-Profile-3.jpg" alt="G=ONE 프로필 사진 3">
+                </div>
+                <div class="profile-slide">
+                  <img src="images/G=ONE-Card-Profile-4.jpg" alt="G=ONE 프로필 사진 4">
+                </div>
+                <div class="profile-slide">
+                  <img src="images/G=ONE-Card-Profile-5.jpg" alt="G=ONE 프로필 사진 5">
+                </div>
+                <div class="profile-slide">
+                  <img src="images/G=ONE-Card-Profile-6.jpg" alt="G=ONE 프로필 사진 6">
+                </div>
+              </div>
+
+              <button class="profile-btn prev" id="profilePrev" aria-label="이전 사진">‹</button>
+              <button class="profile-btn next" id="profileNext" aria-label="다음 사진">›</button>
+
+              <div class="profile-dots" id="profileDots">
+                <button class="active" data-index="0" aria-label="1번 사진"></button>
+                <button data-index="1" aria-label="2번 사진"></button>
+                <button data-index="2" aria-label="3번 사진"></button>
+                <button data-index="3" aria-label="4번 사진"></button>
+                <button data-index="4" aria-label="5번 사진"></button>
+                <button data-index="5" aria-label="6번 사진"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="card">
+            <a href="#" class="contact-trigger">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 4c-2.93 1.346-5 5.046-5 8.492C4 17 8 20 12 20s8-3 8-7c0-3.513-3.5-5.513-6-5.513S9 9 9 12c0 2 1.5 3 3 3s3-1 3-3c0-3.513-2-4.508-2-6.515C13 2.97 16.5 3.87 17 4.98" />
+                </svg>
+              </div>
+              <div class="label">Contact</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+        </section>
+
+        <!-- MUSIC 섹션 -->
+        <section class="content-section stack">
+
+
+          <!-- MUSIC 카드 1 -->
+          <div class="card">
+            <a href="https://linksalad.net/RFLbr8FQis?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnKskAc5e-cRnb7F0Oa9bSyyePzTQdeWpZ3Naz0DToQDrXfBkHLPXc0ujgiTo_aem_YvRYsS5K0NG645Qbj2Iqjw"
+              target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
+                  <path d="M16.5 7.5v.01" />
+                </svg>
+              </div>
+              <div class="label">2nd Full-length Album [습관성 우울 3] 🌿</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- MUSIC 카드 2 -->
+          <div class="card">
+            <a href="https://linksalad.net/eomj9775up?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnnyUci-BPclyOxL9cu4CGzbik7e8qhZac3AkXES8axXme86D5Y20jd7Dzhwg_aem_OHx2HcyK-5pwGJuNF6E3Zg&e=AT76r2kumTsHcgGFDGgC68KZgal2toUBBcWe9DmklM5WFbij47-hcXQoy0QafQ9koc075XXRUqpPyTsWcv0rlcfj6dBzsIgR9oHshBb9Yw"
+              target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 7l-7 5 7 5V7z" />
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                </svg>
+              </div>
+              <div class="label">1st Full-length Album [습관성 우울 2] ❄️</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- MUSIC YouTube 비디오 카드 1 -->
+          <div class="video-card">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/A7cCCul2jZ4" title="기댈곳 뮤직비디오"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <!-- MUSIC YouTube 비디오 카드 2 -->
+          <div class="video-card">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/lF9CG3LHVQo" title="알바이야기 뮤직비디오"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+
+          <!-- MUSIC YouTube 비디오 카드 3 -->
+          <div class="video-card">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/72Yx3nibGwA" title="환승 2020 뮤직비디오"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <!-- MUSIC 카드 6 : Contact -->
+          <div class="card">
+            <a href="#" class="contact-trigger">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 4c-2.93 1.346-5 5.046-5 8.492C4 17 8 20 12 20s8-3 8-7c0-3.513-3.5-5.513-6-5.513S9 9 9 12c0 2 1.5 3 3 3s3-1 3-3c0-3.513-2-4.508-2-6.515C13 2.97 16.5 3.87 17 4.98" />
+                </svg>
+              </div>
+              <div class="label">Contact</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+        </section>
+
+        <!-- BRAND 섹션 -->
+        <section class="content-section stack">
+
+          <!-- BRAND 카드 1 -->
+          <div class="card">
+            <a href="https://www.instagram.com/i_w1ll_be_gone/" target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
+                  <path d="M16.5 7.5v.01" />
+                </svg>
+              </div>
+              <div class="label">Personal IG 📷</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- BRAND 카드 2 -->
+          <div class="card">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 7l-7 5 7 5V7z" />
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                </svg>
+              </div>
+              <div class="label">Buy the Album CD [습관성 우울 3] 🌿</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- BRAND 카드 3 -->
+          <div class="card">
+            <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 18a4.5 4.5 0 0 0 7 .92l2-3v-2.92M5 13v-2m4 6v-8m4 6v-2m4 2v-4m4 4v-6" />
+                </svg>
+              </div>
+              <div class="label">Profile🌟</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- BRAND 카드 4 -->
+          <div class="card">
+            <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9 9h6v6H9z" />
+                </svg>
+              </div>
+              <div class="label">Design Portfolio</div>
+              <div class="dots" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0ZM14 19a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal" aria-hidden="true">
+      <div class="contact-backdrop" id="contactCloseBg"></div>
+
+      <div class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+        <button class="contact-close" id="contactCloseBtn" type="button" aria-label="닫기">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M11.9997 10.5867L16.9497 5.63672L18.3637 7.05072L13.4137 12.0007L18.3637 16.9507L16.9487 18.3647L11.9987 13.4147L7.04974 18.3647L5.63574 16.9497L10.5857 11.9997L5.63574 7.04972L7.04974 5.63772L11.9997 10.5867Z" />
+          </svg>
+        </button>
+
+        <div class="contact-profile">
+          <figure class="contact-avatar">
+            <img src="./images/Profile.png" alt="G=ONE 프로필 이미지">
+          </figure>
+
+          <h5 class="contact-name" id="contactTitle">G=ONE</h5>
+          <p class="contact-subtext">Artist / Contact</p>
+        </div>
+
+        <ul class="contact-list">
+          <li class="contact-item">
+            <div class="contact-item-left">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 5H21V19H3V5ZM12 13L5 8V7L12 12L19 7V8L12 13Z" />
+              </svg>
+              <span>메일</span>
+            </div>
+            <p class="contact-value">yourmail@example.com</p>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
+                <path d="M16.5 7.5v.01" />
+              </svg>
+              <span>인스타</span>
+            </div>
+            <p class="contact-value">@your_instagram</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== 하단 네비게이션 바 ===== -->
+  <div class="bottom-nav">
+    <div class="bottom-nav-left">
+      <figure class="bottom-nav-profile">
+        <img src=".//images/Profile.png" alt="profile" />
+      </figure>
+      <span class="bottom-nav-text">찬란한 탐험가, G=ONE님과 함께하세요!</span>
+    </div>
+
+    <div class="bottom-nav-actions">
+      <button class="bottom-nav-btn share-profile-btn" type="button" aria-label="프로필 공유">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.12 17.0232L8.92096 14.7332C8.37276 15.3193 7.66095 15.7269 6.87803 15.9031C6.09512 16.0793 5.27731 16.0159 4.53088 15.7212C3.78445 15.4266 3.14392 14.9142 2.69253 14.2507C2.24114 13.5871 1.99976 12.8032 1.99976 12.0007C1.99976 11.1982 2.24114 10.4143 2.69253 9.75076C3.14392 9.08725 3.78445 8.57486 4.53088 8.28017C5.27731 7.98548 6.09512 7.92212 6.87803 8.09832C7.66095 8.27452 8.37276 8.68214 8.92096 9.26821L13.121 6.97821C12.8829 6.03417 12.9973 5.0357 13.4427 4.16997C13.8881 3.30424 14.634 2.63069 15.5405 2.27557C16.447 1.92046 17.452 1.90816 18.3669 2.24098C19.2818 2.57381 20.044 3.2289 20.5105 4.08347C20.977 4.93804 21.1157 5.93341 20.9008 6.88299C20.6859 7.83257 20.132 8.67116 19.343 9.24158C18.554 9.81199 17.5841 10.0751 16.615 9.98148C15.6459 9.88789 14.7442 9.44407 14.079 8.73321L9.87896 11.0232C10.0405 11.6645 10.0405 12.3359 9.87896 12.9772L14.079 15.2672C14.7446 14.5567 15.6464 14.1133 16.6156 14.0202C17.5847 13.9271 18.5545 14.1906 19.3432 14.7614C20.1319 15.3322 20.6854 16.171 20.8999 17.1207C21.1143 18.0703 20.9751 19.0656 20.5083 19.9199C20.0414 20.7743 19.279 21.429 18.3639 21.7615C17.4489 22.0939 16.444 22.0812 15.5376 21.7257C14.6313 21.3702 13.8857 20.6964 13.4406 19.8305C12.9955 18.9646 12.8815 17.9661 13.12 17.0222M5.99996 14.0002C6.53039 14.0002 7.0391 13.7895 7.41418 13.4144C7.78925 13.0393 7.99996 12.5306 7.99996 12.0002C7.99996 11.4698 7.78925 10.9611 7.41418 10.586C7.0391 10.2109 6.53039 10.0002 5.99996 10.0002C5.46953 10.0002 4.96082 10.2109 4.58575 10.586C4.21068 10.9611 3.99996 11.4698 3.99996 12.0002C3.99996 12.5306 4.21068 13.0393 4.58575 13.4144C4.96082 13.7895 5.46953 14.0002 5.99996 14.0002ZM17 8.00021C17.5304 8.00021 18.0391 7.78949 18.4142 7.41442C18.7892 7.03935 19 6.53064 19 6.00021C19 5.46977 18.7892 4.96107 18.4142 4.58599C18.0391 4.21092 17.5304 4.00021 17 4.00021C16.4695 4.00021 15.9608 4.21092 15.5857 4.58599C15.2107 4.96107 15 5.46977 15 6.00021C15 6.53064 15.2107 7.03935 15.5857 7.41442C15.9608 7.78949 16.4695 8.00021 17 8.00021ZM17 20.0002C17.5304 20.0002 18.0391 19.7895 18.4142 19.4144C18.7892 19.0393 19 18.5306 19 18.0002C19 17.4698 18.7892 16.9611 18.4142 16.586C18.0391 16.2109 17.5304 16.0002 17 16.0002C16.4695 16.0002 15.9608 16.2109 15.5857 16.586C15.2107 16.9611 15 17.4698 15 18.0002C15 18.5306 15.2107 19.0393 15.5857 19.4144C15.9608 19.7895 16.4695 20.0002 17 20.0002Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== JavaScript: 탭 슬라이드 + 공유 기능 ===== -->
+  <script>
+    // ===== 탭 슬라이드 클래스 =====
+    class TabSlider {
+      constructor() {
+        this.tabs = document.querySelectorAll('.tab');
+        this.slider = document.querySelector('.content-slider');
+        this.wrapper = document.querySelector('.content-wrapper');
+        this.sections = document.querySelectorAll('.content-section');
+        this.currentIndex = 0;
+        this.resizeObserver = null;
+
+        this.init();
+      }
+
+      init() {
+        this.tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const index = parseInt(tab.getAttribute('data-index'));
+            this.selectTab(index);
+          });
+        });
+
+        window.addEventListener('load', () => this.updateHeight(this.currentIndex));
+        window.addEventListener('resize', () => this.updateHeight(this.currentIndex));
+
+        this.observeActiveSection();
+        this.bindMediaLoads();
+
+        requestAnimationFrame(() => this.updateHeight(this.currentIndex));
+        setTimeout(() => this.updateHeight(this.currentIndex), 100);
+        setTimeout(() => this.updateHeight(this.currentIndex), 500);
+      }
+
+      selectTab(index) {
+        if (index === this.currentIndex) return;
+
+        this.currentIndex = index;
+        this.slider.style.transform = `translateX(${index * -100}%)`;
+
+        this.tabs.forEach((tab, i) => {
+          tab.classList.toggle('active', i === index);
+        });
+
+        this.observeActiveSection();
+        requestAnimationFrame(() => this.updateHeight(index));
+        setTimeout(() => this.updateHeight(index), 100);
+        setTimeout(() => this.updateHeight(index), 500);
+      }
+
+      getSectionHeight(index) {
+        const section = this.sections[index];
+        if (!section) return 0;
+
+        return Math.ceil(
+          Math.max(
+            section.scrollHeight,
+            section.offsetHeight,
+            section.getBoundingClientRect().height
+          )
+        );
+      }
+
+      updateHeight(index) {
+        if (!this.wrapper || !this.sections[index]) return;
+
+        requestAnimationFrame(() => {
+          const height = this.getSectionHeight(index);
+          this.wrapper.style.height = `${height}px`;
+        });
+      }
+
+      observeActiveSection() {
+        if (!('ResizeObserver' in window)) return;
+
+        if (this.resizeObserver) {
+          this.resizeObserver.disconnect();
+        }
+
+        this.resizeObserver = new ResizeObserver(() => {
+          this.updateHeight(this.currentIndex);
+        });
+
+        const activeSection = this.sections[this.currentIndex];
+        if (activeSection) {
+          this.resizeObserver.observe(activeSection);
+        }
+      }
+
+      bindMediaLoads() {
+        document.querySelectorAll('iframe').forEach((iframe) => {
+          iframe.addEventListener('load', () => {
+            this.updateHeight(this.currentIndex);
+            setTimeout(() => this.updateHeight(this.currentIndex), 100);
+            setTimeout(() => this.updateHeight(this.currentIndex), 500);
+          });
+        });
+
+        document.querySelectorAll('img').forEach((img) => {
+          if (!img.complete) {
+            img.addEventListener('load', () => this.updateHeight(this.currentIndex));
+          }
+        });
+      }
+    }
+
+    // ===== 프로필 공유 버튼 클래스 =====
+    class ProfileShareButton {
+      constructor() {
+        this.shareBtn = document.querySelector('.share-profile-btn');
+        this.init();
+      }
+
+      init() {
+        if (!this.shareBtn) return;
+
+        this.shareBtn.addEventListener('click', () => {
+          this.shareProfile();
+        });
+      }
+
+      shareProfile() {
+        const url = window.location.href;
+        const title = '찬란한 탐험가, G=ONE';
+        const text = '음악 아티스트 G=ONE의 링크를 공유해보세요!';
+
+        if (navigator.share) {
+          navigator.share({
+            title: title,
+            text: text,
+            url: url
+          }).catch(err => console.log('Share 실패:', err));
+        } else {
+          this.copyToClipboard(url);
+        }
+      }
+
+      copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('프로필 링크가 복사되었습니다!');
+        }).catch(err => {
+          console.error('복사 실패:', err);
+        });
+      }
+    }
+
+    // ===== Contact 모달 클래스 =====
+    class ContactModal {
+      constructor() {
+        this.openBtns = document.querySelectorAll('.contact-trigger');
+        this.modal = document.getElementById('contactModal');
+        this.closeBtn = document.getElementById('contactCloseBtn');
+        this.closeBg = document.getElementById('contactCloseBg');
+
+        this.init();
+      }
+
+      init() {
+        if (!this.openBtns.length || !this.modal) return;
+
+        this.openBtns.forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.open();
+          });
+        });
+
+        if (this.closeBtn) {
+          this.closeBtn.addEventListener('click', () => {
+            this.close();
+          });
+        }
+
+        if (this.closeBg) {
+          this.closeBg.addEventListener('click', () => {
+            this.close();
+          });
+        }
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            this.close();
+          }
+        });
+      }
+
+      open() {
+        this.modal.classList.add('is-open');
+        this.modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+      }
+
+      close() {
+        this.modal.classList.remove('is-open');
+        this.modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      new TabSlider();
+      new ProfileShareButton();
+      new ContactModal();
+
+      const profileTrack = document.getElementById('profileTrack');
+      const profilePrev = document.getElementById('profilePrev');
+      const profileNext = document.getElementById('profileNext');
+      const profileDots = document.querySelectorAll('#profileDots button');
+
+      if (profileTrack && profilePrev && profileNext && profileDots.length) {
+        let profileIndex = 0;
+        const profileTotal = profileDots.length;
+        let startX = 0;
+        let endX = 0;
+
+        function updateProfileSlider() {
+          profileTrack.style.transform = `translateX(-${profileIndex * 100}%)`;
+
+          profileDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === profileIndex);
+          });
+        }
+
+        function nextProfileSlide() {
+          profileIndex = (profileIndex + 1) % profileTotal;
+          updateProfileSlider();
+        }
+
+        function prevProfileSlide() {
+          profileIndex = (profileIndex - 1 + profileTotal) % profileTotal;
+          updateProfileSlider();
+        }
+
+        profileNext.addEventListener('click', nextProfileSlide);
+        profilePrev.addEventListener('click', prevProfileSlide);
+
+        profileDots.forEach((dot) => {
+          dot.addEventListener('click', () => {
+            profileIndex = Number(dot.dataset.index);
+            updateProfileSlider();
+          });
+        });
+
+        profileTrack.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+        });
+
+        profileTrack.addEventListener('touchend', (e) => {
+          endX = e.changedTouches[0].clientX;
+          const diff = startX - endX;
+
+          if (diff > 50) {
+            nextProfileSlide();
+          } else if (diff < -50) {
+            prevProfileSlide();
+          }
+        });
+
+        updateProfileSlider();
+      }
+    });
+  </script>
+</body>
+
+</html>
