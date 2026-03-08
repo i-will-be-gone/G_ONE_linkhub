@@ -69,6 +69,17 @@ mask-size: 100% 100%;
 -webkit-mask-size: 100% 100%;
 }
 
+@media (max-width: 768px){
+  .avatar{
+    height:auto;
+  }
+
+  .avatar img{
+    height:auto;
+    object-fit:contain;
+  }
+}
+
 .name{
 margin: 18px 0 8px;
 font-size: 18px;
