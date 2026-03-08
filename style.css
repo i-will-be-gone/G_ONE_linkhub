@@ -41,6 +41,66 @@ flex-direction:column;
 align-items:center;
 }
 
+/* ===== 사이트 헤더 로고 ===== */
+.site-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.site-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.site-logo:hover {
+  transform: scale(1.05);
+}
+
+.site-logo:active {
+  transform: scale(0.98);
+}
+
+.site-logo img {
+  width: 120px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .site-header {
+    margin-bottom: 16px;
+  }
+
+  .site-logo img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    margin-bottom: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .site-logo img {
+    width: 85px;
+    height: auto;
+  }
+}
+
 /* Profile */
 .profile{
 width:100%;
