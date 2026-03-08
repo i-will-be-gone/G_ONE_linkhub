@@ -229,7 +229,7 @@ opacity:.95;
 }
 
 .content-section.home-section{
-margin-top:0px;
+margin-top:-6px;
 }
 
 /* SNS BAR 스타일 */
@@ -238,7 +238,7 @@ margin-top:0px;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  gap: 30px;
+  gap: 20px;
   padding: 15px 0;
   margin: 10px 0;
   background: #cfe8ff;
@@ -253,8 +253,8 @@ margin-top:0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 32px;
   color: currentColor;
   transition: all 0.3s ease;
   border-radius: 50%;
