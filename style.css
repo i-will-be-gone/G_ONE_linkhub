@@ -182,7 +182,7 @@ position:relative;
 font-weight:600;
 cursor: pointer;
 transition: color .3s ease;
-margin-bottom: 20px;
+margin-bottom: 10px;
 }
 .tab.active{
 color:#fff;
