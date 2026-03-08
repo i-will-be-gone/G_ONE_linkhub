@@ -103,7 +103,7 @@ align-items:center;
 
 /* Profile */
 .profile{
-width:100%;
+/* width:100%; */
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -133,8 +133,8 @@ mask-size: 100% 100%;
 @media (max-width:768px){
 
   .avatar{
-    aspect-ratio:1/1;
-    height:auto;
+    aspect-ratio: 1/1;
+    height: auto;
   }
 
   .avatar img{
@@ -228,6 +228,10 @@ opacity:.95;
   min-width: 0;
 }
 
+.content-section.home-section{
+margin-top:0px;
+}
+
 /* SNS BAR 스타일 */
 .sns-bar{
   display: flex;
@@ -299,6 +303,7 @@ min-width: 0;
 padding-bottom: 30px;
 }
 
+
 .card{
   background: var(--card-bg);
   color: var(--ink);
@@ -359,7 +364,6 @@ opacity:.22;
 .dots svg{ width:16px; height:16px; }
 
 
-/* HOME 프로필 슬라이더 카드 */
 /* 사진만 보이는 심플 프로필 슬라이더 */
 .clean-profile-card{
   padding: 0;
