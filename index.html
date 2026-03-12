@@ -6,6 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>찬란한 탐험가, G=ONE</title>
 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="찬란한 탐험가, G=ONE" />
+  <meta property="og:description" content="Artist / Music Producer from 🇰🇷" />
+  <meta property="og:image" content="https://i-will-be-gone.github.io/G_ONE_linkhub/images/Profile.png" />
+  <meta property="og:url" content="https://i-will-be-gone.github.io/G_ONE_linkhub/" />
+  <meta property="og:site_name" content="G=ONE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="찬란한 탐험가, G=ONE" />
+  <meta name="twitter:description" content="Artist / Music Producer from 🇰🇷" />
+  <meta name="twitter:image" content="https://i-will-be-gone.github.io/G_ONE_linkhub/images/Profile.png" />
+
   <!-- Pretendard -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="style.css" />
@@ -242,7 +254,8 @@
           <!-- MUSIC YouTube 비디오 카드 1 -->
           <div class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/A7cCCul2jZ4" title="기댈곳 뮤직비디오"
+              <iframe id="yt-player-1" src="https://www.youtube.com/embed/A7cCCul2jZ4?enablejsapi=1&playsinline=1"
+                title="기댈곳 뮤직비디오"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
               </iframe>
@@ -252,7 +265,8 @@
           <!-- MUSIC YouTube 비디오 카드 2 -->
           <div class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/lF9CG3LHVQo" title="알바이야기 뮤직비디오"
+              <iframe id="yt-player-2" src="https://www.youtube.com/embed/lF9CG3LHVQo?enablejsapi=1&playsinline=1"
+                title="알바이야기 뮤직비디오"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
               </iframe>
@@ -263,7 +277,8 @@
           <!-- MUSIC YouTube 비디오 카드 3 -->
           <div class="video-card">
             <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/72Yx3nibGwA" title="환승 2020 뮤직비디오"
+              <iframe id="yt-player-3" src="https://www.youtube.com/embed/72Yx3nibGwA?enablejsapi=1&playsinline=1"
+                title="환승 2020 뮤직비디오"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
               </iframe>
@@ -442,6 +457,8 @@
     </div>
   </div>
 
+  <script src="https://www.youtube.com/iframe_api"></script>
+
   <!-- ===== JavaScript: 탭 슬라이드 + 공유 기능 ===== -->
   <script>
     // ===== 탭 슬라이드 클래스 =====
@@ -483,6 +500,10 @@
 
       selectTab(index) {
         if (index === this.currentIndex) return;
+
+        if (window.ytManager) {
+          window.ytManager.pauseAll();
+        }
 
         this.currentIndex = index;
         this.slider.style.transform = `translateX(${index * -100}%)`;
@@ -551,7 +572,7 @@
           }
         });
       }
-      
+
       bindSwipe() {
         if (!this.wrapper) return;
 
@@ -688,8 +709,59 @@
       }
     }
 
+    class YouTubeSinglePlayManager {
+      constructor() {
+        this.players = [];
+        this.iframeSelector = 'iframe[id^="yt-player-"]';
+        this.init();
+      }
+
+      init() {
+        const iframes = document.querySelectorAll(this.iframeSelector);
+        if (!iframes.length) return;
+
+        window.onYouTubeIframeAPIReady = () => {
+          iframes.forEach((iframe) => {
+            const player = new YT.Player(iframe.id, {
+              events: {
+                onStateChange: (event) => this.handleStateChange(event)
+              }
+            });
+
+            this.players.push(player);
+          });
+        };
+      }
+
+      handleStateChange(event) {
+        if (event.data !== YT.PlayerState.PLAYING) return;
+
+        this.players.forEach((player) => {
+          if (player !== event.target) {
+            try {
+              player.pauseVideo();
+            } catch (e) {
+              console.log('pause 실패:', e);
+            }
+          }
+        });
+      }
+
+      pauseAll() {
+        this.players.forEach((player) => {
+          try {
+            player.pauseVideo();
+          } catch (e) {
+            console.log('pause 실패:', e);
+          }
+        });
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
-      new TabSlider();
+      window.ytManager = new YouTubeSinglePlayManager();
+
+      const tabSlider = new TabSlider();
       new ProfileShareButton();
       new ContactModal();
 
@@ -713,43 +785,52 @@
         }
 
         function nextProfileSlide() {
-          profileIndex = (profileIndex + 1) % profileTotal;
-          updateProfileSlider();
+          if (profileIndex < profileTotal - 1) {
+            profileIndex += 1;
+            updateProfileSlider();
+          } else if (tabSlider && tabSlider.currentIndex < tabSlider.sections.length - 1) {
+            tabSlider.selectTab(tabSlider.currentIndex + 1);
+          }
         }
 
         function prevProfileSlide() {
-          profileIndex = (profileIndex - 1 + profileTotal) % profileTotal;
-          updateProfileSlider();
+          if (profileIndex > 0) {
+            profileIndex -= 1;
+            updateProfileSlider();
+          } else if (tabSlider && tabSlider.currentIndex > 0) {
+            tabSlider.selectTab(tabSlider.currentIndex - 1);
+          }
         }
 
-        profileNext.addEventListener('click', nextProfileSlide);
-        profilePrev.addEventListener('click', prevProfileSlide);
 
-        profileDots.forEach((dot) => {
-          dot.addEventListener('click', () => {
-            profileIndex = Number(dot.dataset.index);
-            updateProfileSlider();
+          profileNext.addEventListener('click', nextProfileSlide);
+          profilePrev.addEventListener('click', prevProfileSlide);
+
+          profileDots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+              profileIndex = Number(dot.dataset.index);
+              updateProfileSlider();
+            });
           });
-        });
 
-        profileTrack.addEventListener('touchstart', (e) => {
-          startX = e.touches[0].clientX;
-        });
+          profileTrack.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+          });
 
-        profileTrack.addEventListener('touchend', (e) => {
-          endX = e.changedTouches[0].clientX;
-          const diff = startX - endX;
+          profileTrack.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
 
-          if (diff > 50) {
-            nextProfileSlide();
-          } else if (diff < -50) {
-            prevProfileSlide();
-          }
-        });
+            if (diff > 50) {
+              nextProfileSlide();
+            } else if (diff < -50) {
+              prevProfileSlide();
+            }
+          });
 
-        updateProfileSlider();
-      }
-    });
+          updateProfileSlider();
+        }
+      });
   </script>
 </body>
 
