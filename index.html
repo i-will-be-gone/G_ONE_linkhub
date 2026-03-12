@@ -454,6 +454,10 @@
         this.currentIndex = 0;
         this.resizeObserver = null;
 
+        this.startX = 0;
+        this.endX = 0;
+        this.isSwiping = false;
+
         this.init();
       }
 
@@ -470,6 +474,7 @@
 
         this.observeActiveSection();
         this.bindMediaLoads();
+        this.bindSwipe();
 
         requestAnimationFrame(() => this.updateHeight(this.currentIndex));
         setTimeout(() => this.updateHeight(this.currentIndex), 100);
@@ -544,6 +549,48 @@
           if (!img.complete) {
             img.addEventListener('load', () => this.updateHeight(this.currentIndex));
           }
+        });
+      }
+      
+      bindSwipe() {
+        if (!this.wrapper) return;
+
+        this.wrapper.addEventListener('touchstart', (e) => {
+          // 프로필 슬라이더 같은 내부 슬라이더 건드릴 때는 탭 스와이프 막기
+          if (e.target.closest('.profile-slider')) return;
+
+          this.startX = e.touches[0].clientX;
+          this.endX = this.startX;
+          this.isSwiping = true;
+        }, { passive: true });
+
+        this.wrapper.addEventListener('touchmove', (e) => {
+          if (!this.isSwiping) return;
+          this.endX = e.touches[0].clientX;
+        }, { passive: true });
+
+        this.wrapper.addEventListener('touchend', () => {
+          if (!this.isSwiping) return;
+
+          const diff = this.startX - this.endX;
+          const threshold = 50;
+
+          if (Math.abs(diff) < threshold) {
+            this.isSwiping = false;
+            return;
+          }
+
+          // 왼쪽으로 밀면 다음 탭
+          if (diff > 0 && this.currentIndex < this.sections.length - 1) {
+            this.selectTab(this.currentIndex + 1);
+          }
+
+          // 오른쪽으로 밀면 이전 탭
+          if (diff < 0 && this.currentIndex > 0) {
+            this.selectTab(this.currentIndex - 1);
+          }
+
+          this.isSwiping = false;
         });
       }
     }
